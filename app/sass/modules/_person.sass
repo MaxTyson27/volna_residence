@@ -1,0 +1,176 @@
+.person
+  background-color: $primary-bg
+  +bgp('../images/person-bg.png', cover, bottom, center)
+  &__wrapper
+    padding: 100px 0
+    height: 100%
+    +bgp('../images/person.png', 800px, right 100px, bottom)
+    position: relative
+  &__name
+    font-weight: 300
+    font-size: 25px
+    line-height: 128%
+    color: #2C2C2C
+    position: absolute
+    bottom: 100px
+    left: 50%
+    transform: translateX(-50%)
+    strong
+      display: block
+  &__content
+    padding-top: 100px
+    position: relative
+    max-width: 1025px
+    margin-bottom: 70px
+    &::before
+      content: ''
+      position: absolute
+      width: 53px
+      height: 52px
+      background-repeat: no-repeat
+      background-image: url('../images/dot.png')
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+    .person__name
+      display: none
+  &__text
+    font-weight: 300
+    & + .person__text
+      margin-top: 50px
+  &__object
+    display: flex
+    column-gap: 25px
+    align-items: center
+    img
+      max-width: 264px
+    &-image
+      display: none
+    &-content
+      &-title
+        font-weight: 500
+        font-size: 25px
+        line-height: 128%
+        color: #2C2C2C
+        margin-bottom: 20px
+        span
+          font-weight: 400
+          font-size: 22px
+          line-height: 26px
+          letter-spacing: -0.02em
+          color: #D4B886
+          margin-left: 14px
+          padding-left: 20px
+          position: relative
+          &::after
+            content: ''
+            position: absolute
+            width: 6px
+            height: 6px
+            border-radius: 50%
+            background-color: #D4B886
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+      &-desc
+        font-weight: 300
+        font-size: 20px
+        line-height: 128%
+        color: #2C2C2C
+        margin-bottom: 40px
+        max-width: 240px
+      &-text
+        font-weight: 300
+        font-size: 25px
+        line-height: 128%
+        color: #2C2C2C
+        max-width: 423px
+      &-subtitle
+        font-weight: 500
+        font-size: 20px
+        line-height: 128%
+        color: #2C2C2C
+        margin-bottom: 40px
+
+@media(max-width: '1919px')
+  .person
+    &__wrapper
+      background-size: 600px
+      background-position: right 0px bottom
+    &__name
+      font-size: 15px
+      left: 58%
+    &__content
+      max-width: 1000px
+
+@media(max-width: '1439px')
+  .person
+    background-image: none
+    &__wrapper
+      padding: 60px 0
+      background-size: 300px
+      background-position: right 0px top 100px
+    &__object
+      img
+        display: none
+      &-content
+        margin-bottom: 40px
+        &-subtitle
+          margin-bottom: 20px
+        &-text
+          font-size: 20px
+          max-width: 700px
+        &-desc
+          margin-bottom: 10px
+    &__name
+      display: none
+    &__text
+      margin-bottom: 20px
+      & + .person__text
+        margin-top: 0px
+    &__content
+      max-width: 500px
+      .person__name
+        display: block
+        position: static
+        transform: translateY(0)
+
+@media(max-width: '767px')
+  .person
+    &__wrapper
+      padding-top: 60px
+      padding-bottom: 0
+      background-size: 210px
+      background-image: url('../images/person--sm.png')
+      background-position: right -60px top 70px
+    &__text,
+    &__name
+      font-weight: 300
+      font-size: 12px
+      line-height: 150%
+      max-width: 191px
+    &__content
+      padding-top: 70px
+      margin-bottom: 50px
+      &::before
+        width: 33px
+        height: 33px
+        background-size: cover
+    &__object
+      display: block
+      &-image
+        display: block
+        width: 100%
+        margin: 0 auto
+      &-content
+        &-title
+          font-size: 22px
+          line-height: 128%
+          margin-bottom: 10px
+        &-desc
+          font-size: 15px
+          line-height: 150%
+          margin-bottom: 10px
+        &-text
+          font-size: 12px
+          line-height: 150%

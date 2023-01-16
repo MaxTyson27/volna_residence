@@ -1,0 +1,50 @@
+.contacts
+  background-color: $primary-bg
+  padding: 100px 0
+  +bgp('../images/contacts.jpg', contain, center, right)
+  &__inner
+    display: flex
+    align-items: stretch
+  &__content
+    max-width: 730px
+  &__title
+    margin-bottom: 60px
+  &__image
+    display: none
+  &__text
+    max-width: 640px
+    margin-bottom: 60px
+    font-weight: 300
+    font-size: 25px
+    line-height: 29px
+    letter-spacing: -0.02em
+  &__btn
+    +purchase-btn(350px, 77px)
+
+@media(max-width: '1919px')
+  .contacts
+    background-size: 600px
+
+@media(max-width: '1439px')
+  .contacts
+    padding-top: 60px
+    padding-bottom: 60px
+    background-image: none
+    &__inner
+      display: block
+    &__image
+      display: block
+      margin-bottom: 30px
+
+@media(max-width: '767px')
+  .contacts
+    padding-bottom: 60px
+    &__title
+      margin-bottom: 30px
+    &__text
+      font-size: 15px
+      line-height: 150%
+      max-width: 340px
+      margin-bottom: 40px
+    &__btn
+      width: 100%

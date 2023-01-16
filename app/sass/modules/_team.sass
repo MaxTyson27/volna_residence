@@ -1,0 +1,100 @@
+.team
+  padding: 100px 0
+  +bgp('../images/team.png', cover, center, center)
+  background-color: #232327
+  color: #F2EDE7
+  &__subtitle,
+  &__title
+    color: #F2EDE7
+  &__title
+    text-align: center
+    margin-bottom: 40px
+  &__text
+    font-weight: 300
+    font-size: 39.6075px
+    line-height: 130%
+    text-align: center
+    letter-spacing: -0.02em
+    max-width: 843px
+    margin: 0 auto 60px
+  .team__list
+    margin: 0 auto
+  &__list
+    display: flex
+    justify-content: center
+    column-gap: 100px
+    row-gap: 90px
+    align-items: center
+    flex-wrap: wrap
+    max-width: 1250px
+    &--sm
+      display: none
+    &-item
+      width: max-content
+    .team-title
+      padding: 0 80px
+    &-title
+      position: relative
+      height: 72px
+      display: flex
+      align-items: center
+      width: max-content
+      margin: 0 auto 30px
+      padding: 0 40px
+      &::after,
+      &::before
+        content: ''
+        position: absolute
+        width: 45px
+        height: 72px
+        top: 0
+      &::after
+        right: 0
+        +bgp('../images/wreath-right.png', contain, center, center)
+      &::before
+        left: 0
+        +bgp('../images/wreath-left.png', contain, center, center)
+      span
+        font-weight: 500
+        font-size: 20.52px
+        line-height: 22px
+        letter-spacing: 0.01em
+        text-align: center
+    &-text
+      font-weight: 300
+      font-size: 15px
+      line-height: 15px
+      letter-spacing: 0.01em
+      text-align: center
+
+@media(max-width: '1439px')
+  .team
+    padding: 60px 0
+    &__title
+      margin-bottom: 20px
+    .title
+      font-size: 55px
+    &__text
+      font-weight: 300
+      font-size: 30px
+    &__list
+      column-gap: 80px
+      &-text
+        max-width: 150px
+        margin: 0 auto
+
+@media(max-width: '767px')
+  .team
+    .title
+      font-size: 29px
+    &__text
+      font-size: 15px
+      line-height: 150%
+      max-width: 330px
+      margin-bottom: 20px
+    &__list
+      row-gap: 40px
+      &-text
+        font-size: 13px
+      &-title
+        margin-bottom: 10px

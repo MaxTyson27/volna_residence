@@ -1,0 +1,56 @@
+.purchase
+  background-color: $primary
+  padding-top: 100px
+  +bgp('../images/purchase/1.jpg', 960px, right, top 100px)
+  &__image
+    display: none
+  &__content
+    max-width: 740px
+  &__title
+    margin-bottom: 60px
+    color: #F2EDE7
+  &__text
+    font-weight: 300
+    font-size: 35px
+    line-height: 115%
+    letter-spacing: -0.02em
+    color: #F2EDE7
+    margin-bottom: 95px
+  &__btn
+    +purchase-btn(300px, 75px)
+  &__bottom-text
+    font-weight: 300
+    font-size: 25px
+    line-height: 29px
+    letter-spacing: -0.02em
+    color: #F2EDE7
+    margin-bottom: 40px
+    max-width: 650px
+
+@media(max-width: '1919px')
+  .purchase
+    background-size: 600px
+    &__text
+      margin-bottom: 100px
+
+@media(max-width: '1439px')
+  .purchase
+    padding-top: 60px
+    background-image: none
+    &__image
+      display: block
+      width: 100%
+    &__content
+      margin-bottom: 40px
+
+@media(max-width: '767px')
+  .purchase
+    &__title
+      margin-bottom: 20px
+    &__text
+      font-weight: 300
+      font-size: 15px
+      line-height: 150%
+      margin-bottom: 50px
+    &__btn
+      width: 100%

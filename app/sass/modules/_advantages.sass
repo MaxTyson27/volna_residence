@@ -1,0 +1,178 @@
+.advantages
+  background-color: $primary-bg
+  padding-top: 200px
+  margin-right: auto
+  position: relative
+  padding-bottom: 72px
+  &-cafe,
+  &-private,
+  &-parking
+    padding-bottom: 0
+  &-parking
+    .advantages__image
+      img
+        height: 700px
+  &-cafe
+    .advantages__image
+      img
+        height: 880px
+  &-parking
+    padding-bottom: 200px
+    .advantages__image
+      bottom: 200px
+  &__content
+    max-width: 880px
+    &-box
+      &:nth-child(2)
+        margin-bottom: 200px
+        p
+          margin-bottom: 0
+  &__title
+    margin-bottom: 26px
+  &__text
+    font-weight: 300
+    font-size: 35px
+    line-height: 130%
+    color: #000000
+    margin-bottom: 70px
+  &__link
+    @extend %btn
+  &__video
+    .advantages__bottom-text
+      display: none
+  &__video
+    img
+      height: 750px
+      width: 805px
+      object-fit: cover
+  &__video,
+  &__image
+    position: absolute
+    bottom: 70px
+    right: 0
+  &__image
+    bottom: 0
+    img
+      height: 900px
+      width: 805px
+      object-fit: cover
+  &__bottom-text
+    position: absolute
+    right: 0
+    bottom: 0
+    margin-top: 30px
+    color: $primary
+    font-weight: 300
+    font-size: 20px
+    line-height: 130%
+    width: 805px
+    margin-left: auto
+
+@media(max-width: '1919px')
+  .advantages
+    padding-top: 100px
+    .container
+      padding: 0 60px
+    &-cafe
+      .advantages__image
+        img
+          height: 790px
+    &-parking
+      padding-bottom: 100px
+      .advantages__image
+        bottom: 100px
+        img
+          height: 610px
+          max-height: 100%
+    &__bottom-text
+      width: 595px
+    &__image,
+    &__video
+      right: -60px
+    &__image
+      img
+        max-width: 655px
+        height: 850px
+    &__video
+      img
+        max-width: 655px
+        height: 615px
+    &__text
+      font-size: 30px
+    &__content
+      max-width: 680px
+      &-box
+        &:nth-child(2)
+          margin-bottom: 100px
+
+@media(max-width: '1439px')
+  .advantages
+    padding-bottom: 0
+    .container
+      padding: 0 10px
+    &__image,
+    &__video
+      right: 0px
+    &-cafe
+      .advantages__image
+        img
+          height: 100%
+    &-parking
+      padding-bottom: 60px
+      .advantages__image
+        img
+          height: 100%
+    &__text
+      font-size: 27px
+    &__inner
+      display: block
+      padding: 0
+    &__content
+      margin-bottom: 50px
+      &-box
+        &:nth-child(2)
+          margin-bottom: 50px
+    &__video
+      img
+        margin: 0 auto 20px
+      .advantages__bottom-text
+        display: block
+    &__video,
+    &__image
+      position: static
+      max-width: 100%
+      width: 100%
+      margin: 0 auto
+      img
+        width: 100%
+        max-width: 100%
+        height: 100%
+    &__bottom-text
+      display: none
+      position: static
+      width: 768px
+      padding-left: 10px
+      margin: 0 auto
+      margin-top: 10px
+
+@media(max-width: '767px')
+  .advantages
+    padding-top: 60px
+    &__bottom-text
+      font-size: 12px
+      width: 100%
+    &__title
+      margin-bottom: 5px
+    &__text
+      font-weight: 300
+      font-size: 15px
+      line-height: 150%
+      margin-bottom: 0
+      max-width: 355px
+    &__content
+      &-box
+        margin-bottom: 30px
+        &:nth-child(2)
+          margin-bottom: 30px
+    &__link
+      width: 100%

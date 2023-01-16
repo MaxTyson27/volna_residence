@@ -1,0 +1,10 @@
+.modal.modal-purchase
+  .modal__inner 
+    button.modal__close.modal-purchase__close(type='button')
+      img(src="images/close.svg", alt="close icon")
+    .modal__title Оставьте заявку <br> и&nbsp;получите расчет по <br> Volna&nbsp;Residences
+    p.modal__text Заполните форму
+    form.modal-purchase__form.modal__form(action="#")
+      include ./form-inputs.pug  
+      button.modal__btn(type='submit') Получить расчет
+    p.modal__copy Нажимая кнопку я соглашаюсь <br> <a href='https://nedvex.ru/privacy' target='_blank'>с политикой конфиденциальности</a>

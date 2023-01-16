@@ -1,0 +1,38 @@
+.safety
+  background-color: $primary
+  padding-top: 100px
+  +bgp('../images/purchase/2.jpg', 960px, right, top 100px)
+  &__title
+    margin-bottom: 60px
+    max-width: 621px
+    color: #F2EDE7
+  &__text
+    max-width: 739px
+    font-weight: 300
+    font-size: 35px
+    line-height: 115%
+    color: #F2EDE7
+    margin-bottom: 200px
+  &__btn
+    +purchase-btn(385px, 75px)
+
+@media(max-width: '1919px')
+  .safety
+    background-size: 600px
+    padding-bottom: 100px
+    &__text
+      margin-bottom: 100px
+      font-size: 25px
+      max-width: 630px
+
+@media(max-width: '1439px')
+  .safety
+    background-image: none
+    padding-bottom: 60px
+    &__text
+      margin-bottom: 50px
+
+@media(max-width: '767px')
+  .safety
+    &__btn
+      width: 100%

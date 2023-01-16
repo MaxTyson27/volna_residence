@@ -1,0 +1,28 @@
+header.header
+  //- img.header__image--scaled.header__image--light(src="images/main.jpg", alt="")
+  //- img.header__image--scaled.header__image--dark(src="images/main-dark.jpg", alt="")
+  .container
+    include ../components/menu--sm.pug 
+    .header__wrapper 
+      .burger
+        span.burger__span
+        span.burger__span
+    .header__inner
+      .header__top
+        +menu
+        .header__top-contacts 
+          a.header__top-adress(href="https://yandex.ru/maps/-/CCURJZC81B" target="_blank") Сочи, ул. Ленина, 217а 
+          .header__contacts 
+            a.header__top-contacts-number(href="tel:79628860056") +7 962 886 00 56
+            span Сейчас работаем
+          button.header__top-btn(type='button') Перезвоните мне
+      .header__content
+        .header__content-box
+          h1.header__content-title Volna Residences
+          p.header__content-text Премиум-резиденции на&nbsp;берегу моря с&nbsp;отельным сервисом мирового&nbsp;уровня&nbsp;в&nbsp;Сочи
+          ul.header__content-items
+            li.header__content-item ФЗ 214
+            li.header__content-item Сдача 1/2025
+          button.header__content-button.presentation-btn <span class='hilight'></span> узнать цену
+        include ../components/header-form.pug
+      

@@ -1,0 +1,118 @@
+.modal
+  background-color: #fff
+  border-radius: 12px
+  padding: 40px
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 1200px
+  z-index: -1
+  opacity: 0
+  trainsition: .5s
+  visibility: hidden
+  &.active
+    z-index: 10
+    opacity: 1
+    visibility: visible
+  &-plan
+    +bgp('../images/modal-plan.jpg', contain, right, top)
+  &-album
+    +bgp('../images/modal-album.png', contain, right, top)
+  &-purchase
+    +bgp('../images/modal-purchase.jpg', contain, right, top)
+  &-safety
+    +bgp('../images/modal-safety.jpg', contain, right, top)
+  &-contacts
+    +bgp('../images/modal-contacts.jpg', contain, right, top)
+  &__close
+    background-color: transparent
+    padding: 0
+    border: none
+    position: absolute
+    right: 20px
+    top: 20px
+    cursor: pointer
+  input
+    width: 287px
+  &__title
+    font-weight: 400
+    font-size: 40px
+    line-height: 50px
+    letter-spacing: 0.01em
+    color: #303036
+    max-width: 570px
+    margin-bottom: 25px
+  &__text
+    font-size: 25px
+    line-height: 24px
+    font-weight: 300
+    margin-bottom: 40px
+  &__btn
+    +purchase-btn(287px, 70px)
+    margin-bottom: 20px
+    cursor: pointer
+  &__copy
+    font-weight: 300
+    font-size: 12px
+    line-height: 14px
+    color: #DDDCDB
+    a
+      text-decoration: underline
+
+@media(max-width: '1919px')
+  .modal
+    width: 800px
+    &__title
+      font-size: 25.6567px
+      line-height: 30px
+    &__text
+      font-weight: 300
+      font-size: 12px
+      line-height: 14px
+    &-plan
+      +bgp('../images/modal-plan.jpg', contain, right -30px, top)
+    &-safety
+      +bgp('../images/modal-safety.jpg', contain, right -30px, top)
+    &-contacts
+      width: 870px
+      +bgp('../images/modal-contacts.jpg', contain, right -30px, top)
+    &-purchase
+      +bgp('../images/modal-purchase.jpg', contain, right -30px, top)
+
+@media(max-width: '1439px')
+  .modal
+    width: 700px
+    background-image: none !important
+    background-color: $primary-bg
+    input
+      background-color: transparent
+    &__title
+      margin: 0 auto 30px
+      text-align: center
+      font-size: 30px
+      line-height: 40px
+    &__text
+      font-size: 20px
+      line-height: 25px
+      text-align: center
+    &__form
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__copy
+      text-align: center
+
+@media(max-width: '767px')
+  .modal
+    width: 355px
+    padding: 20px
+    &__title
+      font-size: 22px
+      line-height: 30px
+    &__close
+      width: 20px
+      height: 20px
+    &__text
+      font-size: 18px
+      line-height: 22px

@@ -1,0 +1,82 @@
+.resort
+  +bgp('../images/resort-bg.jpg', cover, top, center)
+  height: 100vh
+  +flex-center
+  &__title
+    margin-bottom: 70px
+    text-align: center
+  &__text
+    text-align: center
+    margin: 0 auto 80px
+    font-weight: 300
+    max-width: 999px
+  &__info
+    display: flex
+    justify-content: center
+    column-gap: 340px
+    margin-bottom: 110px
+    &-item
+      text-align: center
+      span
+        display: block
+        +fzcw(62px, 100%, $primary, 400)
+        @extend %kudryashov
+        margin-bottom: 20px
+      p
+        +fzcw(25px, 130%, $primary, 300)
+        max-width: 352px
+        margin: 0 auto
+  &__btn
+    @extend %btn
+    margin: 0 auto
+
+@media(max-width: '1919px')
+  .resort
+    height: 100%
+    padding: 100px 0
+    &__title
+      margin-bottom: 50px
+    &__text
+      max-width: 915px
+      margin-bottom: 50px
+    &__info
+      margin-bottom: 80px
+      &-item
+        span
+          font-size: 50px
+
+@media(max-width: '1439px')
+  .resort
+    &__title
+      margin-bottom: 30px
+    &__info
+      column-gap: 80px
+      &-item
+        span
+          font-size: 40px
+        p
+          font-size: 18px
+          max-width: 260px
+
+@media(max-width: '767px')
+  .resort
+    padding: 60px 0
+    &__title
+      margin-bottom: 20px
+    &__text
+      margin-bottom: 30px
+    &__info
+      margin-bottom: 50px
+      column-gap: 0px
+      justify-content: space-between
+      &-item
+        span
+          font-size: 50px
+          line-height: 100%
+          margin-bottom: 10px
+        p
+          font-size: 13px
+          line-height: 130%
+          max-width: 185px
+    &__btn
+      width: 100%

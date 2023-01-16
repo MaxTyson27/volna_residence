@@ -1,0 +1,38 @@
+.footer
+  padding: 90px 0
+  background-color: $primary
+  &__inner
+    display: flex
+    max-width: 1200px
+    justify-content: space-between
+  p
+    font-weight: 300
+    font-size: 20px
+    line-height: 130%
+    color: #F2EDE7
+  &__company
+    font-size: 23.3733px
+    line-height: 150%
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    color: #F2EDE7
+    @extend %kudryashov
+
+@media(max-width: '1439px')
+  .footer
+    padding: 60px 0
+    &__inner
+      flex-direction: column
+      align-items: center
+      row-gap: 35px
+    &__info
+      text-align: center
+
+@media(max-width: '767px')
+  .footer
+    &__company
+      font-size: 22px
+      line-height: 150%
+    p
+      font-size: 15px
+      line-height: 130%

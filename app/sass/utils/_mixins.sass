@@ -1,0 +1,76 @@
+=flex-center ()
+  display: flex
+  justify-content: center
+  align-items: center
+
+=center-item ($position)
+  position: $position
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+=center-item-y ($position: absolute)
+  position: $position
+  top: 50%
+  transform: translateY(-50%)
+
+=center-item-x ($position: absolute)
+  position: $position
+  left: 50%
+  transform: translateX(-50%)
+
+=font ($name,$w, $pathWoff2, $pathWoff)
+  @font-face
+    font:
+      family: $name
+      weight: $w
+      style: normal
+      display: swap
+    src: local($name),url($pathWoff2) format('woff2'),url($pathWoff) format('woff')
+
+=bgp($path, $s, $pos1, $pos2 )
+  background:
+    repeat: no-repeat
+    image: url($path)
+    size: $s
+    position: $pos1 $pos2
+
+=fzcw($s, $l, $c, $w)
+  font-size: $s
+  line-height: $l
+  color: $c
+  font-weight: $w
+
+%kudryashov
+  font:
+    family: 'KudryashevHeadline', san-serif
+    weight: 400
+
+%btn
+  width: 386px
+  height: 74px
+  color: #fff
+  font-size: 18px
+  line-height: 27px
+  letter-spacing: 0.03em
+  background: linear-gradient(180deg, #D7B26E 0%, #C99230 100%)
+  border-radius: 6px
+  padding: 0
+  border: none
+  +flex-center()
+  @extend %kudryashov
+  text-transform: uppercase
+
+=purchase-btn($w, $h)
+  width: $w
+  height: $h
+  +flex-center
+  background: linear-gradient(180deg, #D7B26E 0%, #C99230 100%)
+  border-radius: 6px
+  border: none
+  font-size: 18px
+  line-height: 27px
+  letter-spacing: 0.03em
+  text-transform: uppercase
+  color: #FFFFFF
+  @extend %kudryashov

@@ -1,0 +1,24 @@
+.header-modal
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: $primary-bg
+  border-radius: 12px
+  padding: 40px
+  opacity: 0
+  visibility: hidden
+  z-index: -1
+  &.active
+    opacity: 1
+    visibility: visible
+    z-index: 10
+  input
+    background-color: transparent
+    margin: 0 auto 30px
+  &__close
+    width: 20px
+
+@media(max-width: '767px')
+  .header-modal
+    width: 355px

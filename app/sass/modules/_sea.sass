@@ -1,0 +1,49 @@
+.sea
+  +bgp('../images/sea.gif', cover, center, bottom)
+  background-color: $primary
+  color: #F2EDE7
+  &__inner
+    height: 100vh
+    +flex-center
+  &__title
+    margin-bottom: 140px
+  &__list
+    display: flex
+    justify-content: center
+    column-gap: 100px
+    &-item
+      font-weight: 300
+      font-size: 39.6075px
+      line-height: 130%
+      strong
+        display: block
+        text-align: center
+
+@media(max-width: '1919px')
+  .sea
+    &__title
+      margin-bottom: 100px
+      text-align: center
+    &__list
+      &-item
+        font-size: 30px
+
+@media(max-width: '1439px')
+  .sea
+    &__title
+      max-width: 500px
+      margin: 0 auto 70px
+    &__list
+      display: block
+      text-align: center
+      &-item
+        font-size: 25px
+        line-height: 130%
+        &:not(:last-child)
+          margin-bottom: 50px
+
+@media(max-width: '767px')
+  .sea
+    &__title
+      max-width: 180px
+      margin-bottom: 70px

@@ -1,0 +1,10 @@
+.modal.modal-contacts
+  .modal__inner 
+    button.modal__close.modal-contacts__close(type='button')
+      img(src="images/close.svg", alt="close icon")
+    .modal__title Оставьте заявку <br> и&nbsp;на презентацию <br> Volna&nbsp;Residences
+    p.modal__text Заполните форму
+    form.modal-contacts__form.modal__form(action="#")
+      include ./form-inputs.pug  
+      button.modal__btn(type='submit') Записаться
+    p.modal__copy Нажимая кнопку я соглашаюсь <br> <a href='https://nedvex.ru/privacy' target='_blank'>с политикой конфиденциальности</a>

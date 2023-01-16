@@ -1,0 +1,8 @@
+.header-modal
+  form.header-modal__form(action="#")
+    button.modal__close.header-modal__close(type='button')
+      img(src="images/close.svg", alt="close icon")
+    p.form__title Заполните форму и мы вам перезвоним 
+    include ../components/form-inputs.pug
+    button.form__btn.header-modal__form-btn(type='submit') Отправить
+    p.form__copy Нажимая кнопку я соглашаюсь <br> <a href='https://nedvex.ru/privacy' target='_blank'>с политикой конфиденциальности</a> 
